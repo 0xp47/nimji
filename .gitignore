@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Output & Build
+dist/
+build/
+*.tsbuildinfo
+
+# Environment & Credentials (CRITICAL - DO NOT COMMIT)
+.env
+.env*.local
+
+# Generated & Downloaded Images
+images/generated/
+images/searched/
+images/*.png
+images/*.jpg
+images/*.jpeg
+images/*.webp
+images/*.gif
+
+# Local App Sessions & Storage
+.nimji/
+session.json
+keepalive-session.json
+*.log
+
+# OS & System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE Settings
+.vscode/
+.idea/

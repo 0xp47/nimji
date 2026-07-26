@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nimji Cookie Exporter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <img src="assets/icon.png" alt="Nimji Logo" />
+        <h1>Nimji Cookie Exporter</h1>
+      </div>
+      <div id="status" class="status error">Loading...</div>
+
+      <textarea id="envOutput" readonly placeholder="Tokens will appear here..."></textarea>
+
+      <div class="actions">
+        <button id="refreshBtn" type="button">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+          </svg>
+          Refresh
+        </button>
+        <button id="copyBtn" type="button">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+          </svg>
+          Copy Export
+        </button>
+        <button id="clearBtn" type="button">Clear Captured Tokens</button>
+      </div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

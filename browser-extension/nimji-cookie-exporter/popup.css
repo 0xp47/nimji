@@ -1,0 +1,177 @@
+:root {
+  --bg-color: #fdfbf7;
+  --panel-bg: #ffffff;
+  --border-color: #e7dfd5;
+  --text-primary: #451a03; /* Deep warm brown */
+  --text-secondary: #78350f;
+  --accent-cookie: #b45309; /* Cookie brown matching logo */
+  --accent-cookie-hover: #92400e;
+  --status-success-bg: #f0fdf4;
+  --status-success-text: #166534;
+  --status-success-border: #bbf7d0;
+  --status-fail-bg: #fef2f2;
+  --status-fail-text: #991b1b;
+  --status-fail-border: #fecaca;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 330px; /* Highly compact and small extension width */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.header img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+
+h1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+.hint {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 12px;
+  opacity: 0.85;
+}
+
+/* Status box */
+.status {
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.status.success {
+  background-color: var(--status-success-bg);
+  border-color: var(--status-success-border);
+  color: var(--status-success-text);
+}
+
+.status.error {
+  background-color: var(--status-fail-bg);
+  border-color: var(--status-fail-border);
+  color: var(--status-fail-text);
+}
+
+.status:hover {
+  filter: brightness(0.97);
+}
+
+/* Textarea showing the exported block */
+textarea {
+  width: 100%;
+  height: 130px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px;
+  font-family: Consolas, "Fira Code", monospace;
+  font-size: 11px;
+  background-color: #ffffff;
+  color: #1a0f08;
+  outline: none;
+  resize: none;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  border-color: var(--accent-cookie);
+}
+
+textarea::placeholder {
+  color: #a1a1aa;
+}
+
+/* Actions */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+#refreshBtn {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+#refreshBtn:hover {
+  background-color: #f7f3eb;
+  border-color: #d1c7bd;
+}
+
+#copyBtn {
+  background-color: var(--accent-cookie);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#copyBtn:hover {
+  background-color: var(--accent-cookie-hover);
+}
+
+#clearBtn {
+  grid-column: span 2;
+  background-color: transparent;
+  color: #b91c1c;
+  font-size: 11px;
+  padding: 6px 4px 2px;
+  border: none;
+  opacity: 0.75;
+}
+
+#clearBtn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+button:active {
+  transform: translateY(0.5px);
+}
