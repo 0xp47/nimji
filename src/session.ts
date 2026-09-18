@@ -34,7 +34,7 @@ export function createSessionStore(filePath?: string): SessionStore {
 
     async load(): Promise<ConversationState> {
       try {
-        const buf = await readFile(resolved);
+        const buf = await readFile(/*turbopackIgnore: true*/ resolved);
         if (buf.length > MAX_SESSION_FILE_BYTES) return {};
         const raw = buf.toString("utf8");
         const parsed: unknown = JSON.parse(raw);

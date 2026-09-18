@@ -51,3 +51,7 @@ export type {
   SessionStore,
   StreamMeta,
 } from "./types.js";
+
+// Professional Nimji AI Agent for CCSAS
+export * from "./agent/index.js";
+
